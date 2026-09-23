@@ -1,0 +1,22 @@
+5.1. Can you explain the copy (cp ../temp-* .) command used above?
+The (cp) command means copy files. 
+(../) means the parent directory, 
+(temp-*) means selects all files whose names start with temp-, and 
+(.) means the current directory. 
+Therefore, the command copies all temp- files from the parent directory into the current directory.
+
+5.2. Can you explain why, in this case, we did not have to do git init?
+We did not have to use git init because the repository was already created when we used git clone. 
+The git clone command created a local Git repository from the GitHub repository.
+
+5.3. Can you commit the files copied? What do you need to do? Execute the commands that are needed.
+Yes, the copied files can be committed. 
+First, the files need to be added to the staging area using 'git add'. 
+Then they need to be saved in a commit using 'git commit'. 
+Finally, git push can be used to send the commit to the GitHub repository.
+The commands are:
+git add temp-average.py
+git add temp-data.csv
+git add temp-doc.txt
+git commit -m "add project files"
+git push origin main
